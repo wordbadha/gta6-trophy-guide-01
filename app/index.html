@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Trophy Atlas</h1>
+      <p class="tagline">Every one of the 55 official trophies — a guide in our own words, a tracker that remembers, and a three-stage road to the platinum.</p>
+    </div>
+    <div class="progress-card" id="progress-card">
+      <p class="progress-big"><span id="earned-count">0</span><span class="progress-of"> / 55</span></p>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-note" id="progress-note">Platinum: locked — 55 to go</p>
+      <p class="grade-counts" id="grade-counts"></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel roadmap" id="roadmap" aria-labelledby="roadmap-title">
+    <h2 id="roadmap-title">Roadmap to the platinum</h2>
+    <p class="panel-sub">Three stages, in order. Stage 1 is the story; do the one missable trophy as you go, because it cannot be repeated.</p>
+    <ol class="stages">
+      <li class="stage" data-stage="1">
+        <h3><span class="stage-num">1</span> Story first</h3>
+        <p>Play Chapters 1–4, the named missions, the five character finales and the final mission. Meditate at every spot you pass — <strong>Positive Mental Attitude</strong> is the only missable trophy in the game.</p>
+        <p class="stage-count" data-stage-count="1"></p>
+      </li>
+      <li class="stage" data-stage="2">
+        <h3><span class="stage-num">2</span> Leonida cleanup</h3>
+        <p>With the map open, sweep the collectibles and activities: cards, WAiNK spots, vehicles, areas, garages, races, ranges, stranger strands and the robbery set.</p>
+        <p class="stage-count" data-stage-count="2"></p>
+      </li>
+      <li class="stage" data-stage="3">
+        <h3><span class="stage-num">3</span> Mop-up &amp; platinum</h3>
+        <p>The long grinds — 50 challenges, $250,000 laundered, $100,000 spent, 500 choices — then 100% completion and the platinum.</p>
+        <p class="stage-count" data-stage-count="3"></p>
+      </li>
+    </ol>
+    <p class="missable-banner" id="missable-banner">⚠ Only 1 missable trophy: <strong>Positive Mental Attitude</strong> — meditate at all 18 spots during the story. Everything else can be earned after the finale.</p>
+  </section>
+
+  <section class="panel controls" aria-label="Tracker controls">
+    <div class="controls-row">
+      <label class="field field-search">Search
+        <input type="search" id="search" placeholder="Trophy name or description…" autocomplete="off">
+      </label>
+      <label class="field">Kind
+        <select id="filter-kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label class="field">Grade
+        <select id="filter-grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="field">Status
+        <select id="filter-status">
+          <option value="all">All</option>
+          <option value="earned">Earned</option>
+          <option value="unearned">Not earned</option>
+        </select>
+      </label>
+      <label class="field field-check">
+        <input type="checkbox" id="spoiler-toggle" checked>
+        <span>Hide hidden trophies until earned <span class="muted">(28 hidden)</span></span>
+      </label>
+    </div>
+    <div class="controls-row controls-row-2">
+      <button type="button" id="export-btn">Export progress (.json)</button>
+      <button type="button" id="import-btn">Import progress</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" id="reset-btn" class="danger">Reset progress</button>
+      <span class="save-note" id="save-note">Progress saves in this browser (localStorage). No account, no network.</span>
+    </div>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+  </section>
+
+  <div class="layout">
+    <section class="panel list-panel" aria-labelledby="list-title">
+      <h2 id="list-title">Trophy checklist</h2>
+      <ul class="trophy-list" id="trophy-list"></ul>
+    </section>
+    <aside class="panel detail-panel" id="detail-panel" aria-labelledby="detail-title">
+      <h2 id="detail-title">Trophy guide</h2>
+      <div id="detail-body">
+        <p class="muted">Select a trophy from the checklist to read its guide, its sources and whether its steps are verified.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="panel honesty" aria-labelledby="honesty-title">
+    <h2 id="honesty-title">How this guide is honest</h2>
+    <ul>
+      <li>Names, descriptions and grades are PlayStation's official list, exactly as published — 1 platinum, 2 gold, 6 silver, 46 bronze, 28 hidden.</li>
+      <li>Every guide is written for this entry in our own words and names its sources beside it (PowerPyx, PlanetGTA6, KeenGamer, OutputLag, GTAVibes, GTA Zone, PSNProfiles). A source is cited, never copied.</li>
+      <li>Guides that add steps beyond the official description are marked <strong>Details unconfirmed</strong> — confirm them against the cited guide before you grind. Story guides need no extra steps, so they carry no such mark.</li>
+      <li>The app is static files only. It loads nothing from the network and works with the network off.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Atlas — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide uses no Rockstar logo, artwork or game screenshots. Trophy list: PlayStation, via PSNProfiles / Exophase, as of 18 November 2026.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
